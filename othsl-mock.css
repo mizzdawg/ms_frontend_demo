@@ -181,6 +181,12 @@ svg.acct-icon-solid {
     fill: #0D274C;
 }
 
+.nav-logo-container {
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+}
+
 .nav-logo-container a {
     line-height: 0;
 }
@@ -543,11 +549,13 @@ main {
     padding-left: 10px;
     padding-right: 10px;
     background-color: #f6f8f7;
+    min-height: 100vh;
 }
 
 .main-container {
     width: 100%;
     max-width: 1300px;
+    margin-top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -805,3 +813,20 @@ main {
     }
 
 }
+
+/* EMWSL NAV SPECIFIC CSS FOR DEMO */
+header.emwsl-nav-container {
+    background-color: #d41e00;
+}
+
+
+
+/* BSSL NAV SPECIFIC CSS FOR DEMO */
+header.bssl-nav-container {
+    background-color: #4b6d90;
+}
+
+/* .bssl-nav-logo {
+    width: 70px;
+    margin: 10px 0;
+} */

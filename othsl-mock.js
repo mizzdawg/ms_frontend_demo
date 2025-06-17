@@ -67,4 +67,46 @@ mobileNavHeaders.forEach((header, index) => {
 })
 
 
+// Edit form JS
+const scoreInputs = document.querySelectorAll('.score-input');
+const editScoreBtn = document.querySelector('.edit-score-btn')
+const submitScoreBtn = document.querySelector('.submit-score-btn')
+const scoreBtns = document.querySelectorAll('.score-btn');
+const scoreForm = document.querySelector('.score-form');
+
+let isEditing = false;
+
+scoreBtns.forEach(el=> {
+    el.addEventListener('click', function() {
+        console.log('this fired')
+        toggleEdit();
+        toggleInputs(el);
+        toggleButtonDisplay();
+    })
+})
+
+scoreForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+})
+
+function toggleInputs(input) {
+    scoreInputs.forEach(function(input){
+        input.toggleAttribute('readonly')
+        console.log('inputs toggled')
+    })
+}
+
+
+function toggleEdit() {
+    isEditing = !isEditing;
+    console.log('edit toggle');
+}
+
+function toggleButtonDisplay() {
+    editScoreBtn.classList.toggle('show-btn');
+    submitScoreBtn.classList.toggle('show-btn');
+    console.log('btn toggle');
+} 
+
+
 
