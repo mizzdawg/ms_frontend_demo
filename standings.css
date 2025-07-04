@@ -470,14 +470,13 @@ main {
 }
 
 .match {
-    border-bottom: 1px solid #e0e0e0;
-    padding-block: 20px;
+    border-top: 1px solid #e0e0e0;
+    padding-block: 5px;
 }
 
 .match-details {
     display: flex;
     justify-content: flex-start;
-    align-items: center;
 }
 
 
@@ -487,102 +486,107 @@ main {
     }
 }
 
-.match-teams {
+.match-details-col-1,
+.match-details-col-2 {
+    padding: 12px;
+    border-right: 1px solid #edeef0;
+}
+
+.match-details-col-1 {
+    width: 30%;
+}
+
+.match-details-col-2 {
+    flex-grow: 1;
+}
+
+.match-status {
     display: flex;
-    flex: 2;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8px;
+    color: #48494A;
+    font-size: 13px;
+    line-height: 1.25;
+    font-weight: 700;
+}
+
+.match-status-official {
+    padding: 5px;
+    color: #326a1a;
+    background: #ecfdf5;
+    border-radius: 8px;
+}
+
+.match-team {
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
     position: relative;
 }
 
-
-.match-team {
-    width: 50%;
-    padding-left: 50px;
-    display: flex;
-    align-items: center;
+.match-team-logo {
+    width: 32px;
+    margin-right: 8px;
 }
-
-.match-team:first-of-type {
-    justify-content: flex-end;
-    padding-left: 0;
-    padding-right: 50px;
-}
-
 
 .match-team-name {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 500;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 600;
     font-family: 'Roboto', sans-serif;
     text-decoration: none;
+    white-space: nowrap ;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .match-team-name:hover {
     text-decoration: underline;
 }
 
-.match-team-logo {
-    width: 32px;
-    margin-left: 5px;
-    margin-right: 5px;
+.match-team-score {
+    font-size: 18px;
+    font-weight: 700;
 }
 
-.match-time,
-.match-score {
+.match-team-score-loss {
+    color: #6c6d6f;
+}
+
+.match-caret {
+    width: 13px;
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 75px;
-    padding: 5px;
-    font-size: 14px;
-    line-height: 1;
-    font-family: 'Roboto', sans-serif;
-    text-align: center;
-    border-radius: 4px;
-    border: 1px solid #a18fa1;
+    right: -13px;
 }
 
-.match-score {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5px;
-    color: whitesmoke;
-    font-weight: 600;
-    background-color: #333F48;
-}
-
-.match-score-verify {
-    fill: #1DBC60;
-    width: 14px;
-}
-
-.match-score-verified {
-    display: flex;
-    gap: 2px;
-    align-items: center;
+.match-note {
+    margin-top: 8px;
+    color: #6c6d6f;
+    font-size: 12px;
 }
 
 .match-location {
     display: flex;
-    flex: 1;
     align-items: center;
-    gap: 5px;
 }
 
 .match-details-icon {
+    margin-right: 5px;
     width: 24px;
-    stroke: black;
-    flex-shrink: 0;
+    stroke: #48494A;
 }
 
 .match-location-link {
-    font-size: 12px;
-    line-height: 18px;
-    font-weight: 400;
+    color: #48494A;
+    font-size: 13px;
+    line-height: 1;
+    font-weight: 700;
     font-family: 'Roboto', sans-serif;
-    max-width: 200px;
+    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -590,6 +594,50 @@ main {
 
 .match-location-link:hover {
     text-decoration: underline;
+}
+
+.match-details-btns {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+.edit-game-btn {
+    margin-bottom: 8px;
+    color: rgb(12,16,20);
+    background: rgb(239,239,239);
+}
+
+.match-more-info-link {
+    color: white;
+    background: rgb(74, 93, 249)
+}
+
+.edit-game-btn,
+.match-more-info-link {
+    padding: 8px 18px;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-game-btn:hover {
+    background-color: rgb(231, 234, 238);
+}
+
+.edit-game-btn:active {
+    color: rgba(12 16 20 / .75);
+    background-color: rgb(231, 234, 238);
+    transform: scale(.98);
+}
+
+.match-more-info-link:hover {
+    background: rgb(65, 80, 247);
 }
 
 .match-notes {
@@ -624,25 +672,6 @@ main {
     justify-content: flex-end;
 }
 
-.match-more-info-link {
-    display: flex;
-    align-items: center;
-    padding: 3px 5px;
-    line-height: 12px;
-    border-radius: 4px;
-    border: 1px solid #ebe5eb;
-}
-
-.match-more-info-link span {
-    font-size: 12px;
-    line-height: 12px;
-    font-family: 'Roboto', sans-serif;
-}
-
-.match-more-info-link:hover {
-    background-color: #f8f8f8;
-}
-
 @media (max-width: 1024px) {
 
     .match-more-info {
@@ -651,46 +680,56 @@ main {
 }
 
 @media (max-width: 980px) {
-    .match-details {
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
+    .match-details-col-1 {
+        width: 40%;
     }
 
+    .match-details-col-2 {
+        padding-left: 0;
+    }
+    
     .match-teams {
         width: 100%;
     }
 
-    .match-team {
-        padding-left: 30px;
-    }
-
-    .match-team:first-of-type {
-        padding-right: 30px;
-    }
-
-
-    .match-team-name {
-        font-size: 12px;
-        line-height: 18px;
+    .match-details-notes {
+        display: none;
     }
 
     .match-team-logo {
         width: 24px;
-        margin-left: 4px;
         margin-right: 4px;
-    }
-
-    .match-time,
-    .match-score {
-        width: 65px;
-        padding: 4px;
-        font-size: 12px;
     }
 
     .match-location-link {
         max-width: 100%;
     }
+}
+
+@media (max-width: 525px) {
+    .match-details-col-1 {
+        width: 50%;
+    }
+
+    .match-status {
+        font-size: 11px;
+    }
+
+    .match-team-name {
+        font-size: 13px;
+    }
+
+    .match-team-score {
+        font-size: 15px;
+        padding-left: 2px;
+        background: #fff;
+    }
+    
+    .edit-game-btn,
+    .match-more-info-link {
+        padding: 7px 12px;
+        font-size: 13px;
+}
 }
 
 /* DIVISIONS PAGE CSS */
@@ -1269,3 +1308,373 @@ main {
 .team-page-schedule-date {
     margin-top: 20px;
 }
+
+
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+
+.edit-module {
+    position: fixed;
+    top: 0;
+    right: 0;
+    transition: transform .1s ease-out;
+    width: 100%;
+    max-width: 425px;
+    height: 100vh;
+    transform: translateX(100%);
+    font-size: 16px;
+    font-weight: 600;
+    border-left: 1px solid darkgray;
+    background-color: #fff;
+    overflow: auto;
+    z-index: 15;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.edit-module-active {
+    transform: translateX(0%);
+}
+
+
+.edit-module-header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    padding: 0 16px;
+    border-bottom: 1px solid rgb(219,219,219);
+    background-color: #fff;
+    z-index: 10;
+}
+
+.edit-module-x-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.edit-module-submit-btn {
+    padding: 4px 10px;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: rgb(74, 93, 249)
+}
+
+.edit-module-submit-btn:hover {
+    background: rgb(65, 80, 247);
+}
+
+.edit-module-submit-btn:active {
+    background: rgb(65, 80, 247);
+    transform: scale(.98);
+}
+
+.edit-module-section {
+    margin: 32px 0;
+}
+
+.edit-module-main {
+    padding: 0 16px;
+}
+
+.edit-module-score {
+    display: flex;
+    gap: 50px;
+}
+
+.edit-score-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.edit-module-label {
+    padding-bottom: 8px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.edit-module-input {
+    margin-bottom: 16px;
+    font-family: inherit;
+    vertical-align: middle;
+    border: 1px solid rgb(219, 223, 228);
+    border-radius: 8px;
+}
+
+.edit-module-date-time-venue {
+    display: flex;
+    flex-direction: column;
+}
+
+.edit-module-date-time-venue-input{
+    padding: 10px 8px;
+    cursor: pointer;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+}
+
+.edit-module-game-venue {
+    margin-bottom: 16px;
+}
+
+.edit-module-venue {
+    font-weight: 400;
+    line-height: 1;
+    white-space: nowrap;        
+    overflow: hidden;          
+    text-overflow: ellipsis;    
+    width: 100%;  
+}
+
+.edit-team-score {
+    width: 90px;
+    margin-bottom: 0;
+    padding: 10px 0 0 0;
+    text-align: center;
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+/* Removing default counters for type: number inputs */
+/* Chrome, Safari, Edge, Opera */
+.edit-team-score::-webkit-outer-spin-button,
+.edit-team-score::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.edit-team-score {
+  -moz-appearance: textfield;
+}
+
+.edit-module-end-options {
+    display: flex;
+    gap: 10px;
+}
+
+.edit-end-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.edit-end-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.edit-end-radio-mark {
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgb(219, 223, 228);
+    border-radius: 50%;
+    margin-right: 3px;
+    position: relative;
+}
+
+input.edit-end-option:checked + .edit-end-radio-mark::after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    background-color: rgb(59,119,219);
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+
+.edit-end-details {
+    display: none;
+}
+
+.details-active {
+    display: flex;
+    padding-top: 16px;
+}
+
+
+.edit-end-forfeit-details {
+    flex-direction: column;
+    gap: 12px;
+}
+
+.edit-forfeit-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.edit-end-option {
+    transform: scale(1.5);
+    margin-right: 8px;
+}
+
+.edit-end-penalties-details {
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Removing default counters for type: number inputs */
+/* Chrome, Safari, Edge, Opera */
+.edit-team-pk::-webkit-outer-spin-button,
+.edit-team-pk::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.edit-team-pk {
+  width: 30px;
+  padding: 5px 0;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  -moz-appearance: textfield;
+}
+
+.edit-penalties-label {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.edit-module-cards {
+    margin: 32px 0;
+}
+
+
+
+.edit-card-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 8px;
+    border: 1px solid rgb(219, 223, 228);
+    border-radius: 8px;
+}
+
+.edit-card-info:hover {
+    cursor: pointer;
+    background-color: rgb(239, 239, 239);
+}
+
+.player-card-container {
+    margin: 16px 0;
+    background-color: rgb(239, 239, 239);
+    border-radius: 8px;
+}
+
+.home-player-card-active {
+    padding: 16px 10px;
+}
+
+.edit-module-player-name {
+    display: block;
+    padding: 16px 0 5px;
+    font-size: 14px;
+}
+
+.edit-module-player-card {
+    display: block;
+    padding-left:10px;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.edit-module-solo-check {
+    display: flex;
+    align-items: center;
+}
+
+.edit-match-solo-label {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 8px;
+    border: 1px solid rgb(219, 223, 228);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit-match-final-solo:hover,
+.edit-match-final-solo:has(input[type="checkbox"]:checked) {
+    cursor: pointer;
+    background-color: rgb(239, 239, 239);
+}
+
+.edit-solo-check {
+    margin-left: 10px;
+    transform: scale(1.5);
+}
+
+/* Player List Module */
+
+.edit-module-select-players {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.edit-player-option {
+    margin-right: 10px;
+    transform: scale(1.5);
+}
+
+.edit-player-card-options {
+    display: none;
+    margin-left: 10px;
+    padding-top: 8px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.player-card-options-active {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.edit-card-option {
+    transform: scale(1.2);
+    margin-right: 6px;
+}
+
+
+/* EDIT VENUE MODULE CSS */
+
+.edit-custom-venue {
+    display: flex;
+    flex-direction: column;
+}
+
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+/* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
+
+
+

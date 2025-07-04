@@ -280,6 +280,357 @@
         </div>
     </div>
 
+    <div class="edit-module edit-module-game-details">
+            <div class="edit-module-header">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="edit-module-x-icon" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+                <span class="edit-module-header-text">Edit game details</span>
+                <button class="edit-module-submit-btn">Submit</button>
+            </div>
+            <div class="edit-module-main">
+                <section class="edit-module-section">
+                    <div class="edit-module-date-time-venue">
+                        <label class="edit-module-label" for="edit-game-date">Game Date</label>
+                        <input id="edit-game-date" name="edit-game-date" type="date" class="edit-module-input edit-module-date-time-venue-input" value="">
+                        <label class="edit-module-label" for="edit-game-time">Game Time</label>
+                        <input id="edit-game-time" for="edit-game-time" type="time" class="edit-module-input edit-module-date-time-venue-input" value="">
+                        <div class="edit-module-game-venue">
+                            <p class="edit-module-label">Game Venue</p>
+                            <p class="edit-module-venue">Foss Park Somerville MA (turf)</p>
+                        </div>
+                        <div class="edit-card-info edit-change-venue">
+                            <span>Change Game Venue</span> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </div>
+                    </div>
+                </section>
+                <section class="edit-module-section">
+                    <div class="edit-module-solo-check">
+                        <label for="mark-game-postponed" class="edit-match-solo-label">Postpone Game
+                            <input type="checkbox" id="mark-game-postponed" class="edit-solo-check">
+                        </label>
+                    </div>
+                </section>
+                <section class="edit-module-section">
+                    <div class="edit-module-score">
+                        <div class="edit-score-container">
+                            <label class="edit-module-label" for="edit-home-score">Team A</label>
+                            <input id="edit-home-score" type="number" class="edit-team-score edit-module-input" value="">
+                        </div>
+                        <div class="edit-score-container">
+                            <label class="edit-module-label" for="edit-away-score">Team B</label>
+                            <input id="edit-away-score" type="number" class="edit-team-score edit-module-input" value="">
+                        </div>
+                    </div>
+                </section>
+                <section class="edit-module-section">
+                    <div class="edit-module-end">
+                        <div class="edit-module-end-options">
+                            <div class="edit-end-container">
+                                <label class="edit-end-label" for="game-regulation">
+                                    <input class="edit-end-option" type="radio" name="edit-end" id="game-regulation" checked>
+                                    Regulation
+                                </label>
+                            </div>
+                            <div class="edit-end-container">
+                                <label class="edit-end-label" for="game-overtime">
+                                    <input class="edit-end-option" type="radio" name="edit-end" id="game-overtime">
+                                    Overtime
+                                </label>
+                            </div>
+                            <div class="edit-end-container">                           
+                                <label class="edit-end-label" for="game-penalties">
+                                    <input class="edit-end-option" type="radio" name="edit-end" id="game-penalties">
+                                    Penalties
+                                </label>
+                            </div>
+                            <div class="edit-end-container">
+                                <label class="edit-end-label" for="game-forfeit">
+                                    <input class="edit-end-option" type="radio" name="edit-end" id="game-forfeit">
+                                    Forfeit
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit-module-end-details">
+                            <div class="edit-end-forfeit-details edit-end-details">
+                                <label class="edit-forfeit-label" for="edit-forfeit-home-a">
+                                    <input class="edit-forfeit-option" type="radio" name="edit-forfeit" id="edit-forfeit-home-a">
+                                    Home Team Forfeit with Penalty A
+                                </label>
+                                <label class="edit-forfeit-label" for="edit-forfeit-home-b">
+                                    <input class="edit-forfeit-option" type="radio" name="edit-forfeit" id="edit-forfeit-home-b">
+                                    Home Team Forfeit with Penalty B
+                                </label>
+                                <label class="edit-forfeit-label" for="edit-forfeit-away-a">
+                                    <input class="edit-forfeit-option" type="radio" name="edit-forfeit" id="edit-forfeit-away-a">
+                                    Away Team Forfeit with Penalty A
+                                </label>
+                                <label class="edit-forfeit-label" for="edit-forfeit-away-b">
+                                    <input class="edit-forfeit-option" type="radio" name="edit-forfeit" id="edit-forfeit-away-b">
+                                    Away Team Forfeit with Penalty B
+                                </label>
+                            </div>
+                            <div class="edit-end-penalties-details edit-end-details">
+                                <div class="edit-end-penalties-container">
+                                    <input class="edit-module-input edit-team-pk" type="number" id="home-team-makes">
+                                    <label class="edit-penalties-label" for="home-team-makes">Home Team Penalty Makes</label>
+                                </div>
+                                <div class="edit-end-penalties-container">
+                                    <input class="edit-module-input edit-team-pk" type="number" id="away-team-makes">
+                                    <label class="edit-penalties-label" for="away-team-makes">Away Team Penalty Makes</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="edit-module-section">
+                    <div class="edit-module-cards">
+                        <div class="edit-card-info edit-card-info-home">
+                            <span>Add Cards for Home Team</span> 
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </div>
+                        <div class="player-card-container home-player-card">
+
+                        </div>
+                        <div class="edit-card-info edit-card-info-away">
+                            <span>Add Cards for Away Team</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </div>
+                        <div class="player-card-container away-player-card">
+                            
+                        </div>
+                    </div>
+                </section>
+                <section class="edit-module-section">
+                    <div class="edit-module-solo-check">
+                        <label for="mark-result-final" class="edit-match-solo-label">Mark Result as Final
+                            <input type="checkbox" id="mark-result-final" class="edit-solo-check">
+                        </label>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="edit-module edit-module-change-venue">
+            <div class="edit-module-header">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="edit-module-x-icon edit-module-x-icon-venue" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+                <span class="edit-module-header-text">Change venue</span>
+                <button class="edit-module-submit-btn venue-module-submit-btn">Continue</button>
+            </div>
+            <div class="edit-module-main">
+                <section class="edit-module-section">
+                    <div class="edit-custom-venue">
+                        <label class="edit-module-label" for="edit-game-date">Enter Venue</label>
+                    <input id="edit-game-date" name="edit-game-date" type="text" class="edit-module-input edit-module-date-time-venue-input" value="">
+                    </div>
+                </section>
+            </div>
+            
+        </div>
+        <div class="edit-module edit-module-home-player-details">
+            <div class="edit-module-header">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="edit-module-x-icon edit-module-x-icon-players" viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
+                <span class="edit-module-header-text">Select players</span>
+                <button class="edit-module-submit-btn players-module-submit-btn">Continue</button>
+            </div>
+            <div class="edit-module-main">
+                <section class="edit-module-section">
+                    <div class="edit-module-select-players">
+                        <div class="edit-select-player-group">
+                            <label for="" class="edit-select-player">
+                                <input type="checkbox" value="Luiny Ascencio - MA1200328221" class="edit-player-option">
+                                <span class="edit-checkbox"></span>
+                                Luiny Ascencio - MA1200328221
+                            </label>
+                            <div class="edit-player-card-options">
+                                <label for="" class="edit-player-card-option">
+                                    <input type="radio" value="Yellow" name="player-card-option" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="radio" value="2 Yellows" name="player-card-option" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    2 Yellows
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="radio" value="Yellow & Red" name="player-card-option" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow & Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="radio" value="Red" name="player-card-option" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="radio" value="Red With Violence" name="player-card-option" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red With Violence
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit-select-player-group">
+                            <label for="" class="edit-select-player">
+                                <input type="checkbox" value="Silas Da Silva - MA1223488222" class="edit-player-option">
+                                <span class="edit-checkbox"></span>
+                                Silas Da Silva - MA1223488222
+                            </label>
+                            <div class="edit-player-card-options">
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow 2 Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow 2 Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red With Violence" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red with violence
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit-select-player-group">
+                            <label for="" class="edit-select-player">
+                                <input type="checkbox" value="Michael DiFronzo - MA1200345221" class="edit-player-option">
+                                <span class="edit-checkbox"></span>
+                                Michael DiFronzo - MA1200345221
+                            </label>
+                            <div class="edit-player-card-options">
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow 2 Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow 2 Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red With Violence" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red with violence
+                                </label>
+                            </div>
+                        </div>  
+                        <div class="edit-select-player-group">
+                            <label for="" class="edit-select-player">
+                                <input type="checkbox" value="Luiny Ascencio - MA1200328221" class="edit-player-option">
+                                <span class="edit-checkbox"></span>
+                                Luiny Ascencio - MA1200328221
+                            </label>
+                            <div class="edit-player-card-options">
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow 2 Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow 2 Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red With Violence" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red with violence
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit-select-player-group">
+                            <label for="" class="edit-select-player">
+                                <input type="checkbox" value="Silas Da Silva - MA1223488222" class="edit-player-option">
+                                <span class="edit-checkbox"></span>
+                                Silas Da Silva - MA1223488222
+                            </label>
+                            <div class="edit-player-card-options">
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow 2 Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow 2 Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red With Violence" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red with violence
+                                </label>
+                            </div>
+                        </div>
+                        <div class="edit-select-player-group">
+                            <label for="" class="edit-select-player">
+                                <input type="checkbox" value="Michael DiFronzo - MA1200345221" class="edit-player-option">
+                                <span class="edit-checkbox"></span>
+                                Michael DiFronzo - MA1200345221
+                            </label>
+                            <div class="edit-player-card-options">
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Yellow 2 Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Yellow 2 Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red
+                                </label>
+                                <label for="" class="edit-player-card-option">
+                                    <input type="checkbox" value="Red With Violence" class="edit-card-option">
+                                    <span class="edit-checkbox"></span>
+                                    Red with violence
+                                </label>
+                            </div>
+                        </div>                      
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
     <main>
         <!-- Header Section -->
         <section class="section-container section-container-intitial">
@@ -357,194 +708,200 @@
                 <ul class="match-list">
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Irish Village</a>
-                                    <img src="images/lp.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
+                                    <span>FT</span>
+                                    <span class="match-status-official">Official Result</span>
                                 </div>
-                                <div class="match-score">
-                                    <span>3 - 2</span>
-                                    <!-- Only show this if manager(s) verifies score -->
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="match-score-verify"
-                                        viewBox="0 0 16 16">
-                                        <path
-                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                    </svg>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/mc.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">CDF Azzurri</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/lp.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Irish Village</a>
+                                        <span class="match-team-score">4</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
+                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/mc.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">CDF Azzurri</a>
+                                        <span class="match-team-score match-team-score-loss">1</span>
+                                    </div>
                                 </div>
                             </div>
-
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Foss Park Somerville MA (turf)</a>
-                            </div>
-                            <!-- Need to edit desgin of 'match details' section - HTML to change -->
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
+                                    <a class="match-location-link" href="#">Foss Park Somerville MA (turf)</a>
+                                </div>
+                            </div>
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <button class="edit-game-btn">Edit match details</button>
+                                    <a href="#" class="match-more-info-link">Match details</a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Meadowlark FC</a>
-                                    <img src="images/chelsea.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
+                                    <span>FT-OT</span>
                                 </div>
-                                <div class="match-score">
-                                    <span>2 - 0</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="match-score-verify"
-                                        viewBox="0 0 16 16">
-                                        <path
-                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                    </svg>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/arsenal.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Kendall Wanderers</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/chelsea.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Meadowlark FC</a>
+                                        <span class="match-team-score match-team-score-loss">2</span>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/arsenal.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Kendall Wanderers</a>
+                                        <span class="match-team-score">3</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
+                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Danehy Field 1 Cambridge MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
+                                    <a class="match-location-link" href="#">HYSA Fields at Marshall Street -- Field M2 Holliston MA (turf)</a>
+                                </div>
+                            </div>
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <button class="edit-game-btn">Edit match details</button>
+                                    <a href="#" class="match-more-info-link">Match details</a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Eastern FC</a>
-                                    <img src="images/villa.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
+                                    <span>FT-PENS</span>
+                                    <span class="match-status-official">Official Result</span>
                                 </div>
-                                <div class="match-score">
-                                    <span>1 - 3</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="match-score-verify"
-                                        viewBox="0 0 16 16">
-                                        <path
-                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
-                                    </svg>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/nc.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Loco Gunners</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/villa.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Eastern FC</a>
+                                        <span class="match-team-score">1</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
+                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/nc.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Loco Gunners</a>
+                                        <span class="match-team-score match-team-score-loss">1</span>
+                                    </div>
+                                    <div class="match-note">
+                                        <span>Eastern FC wins 4-3 on penalties</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Malden Catholic High School Malden MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
+                                    <a class="match-location-link" href="#">Malden Catholic High School Malden MA (turf)</a>
+                                </div>
+                            </div>
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <a href="#" class="match-more-info-link">Match details</a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Groton House FC</a>
-                                    <img src="images/nf.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
+                                    <span>9:00 AM</span>
                                 </div>
-                                <div class="match-score">
-                                    <span>2 - 2</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/bha.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">MORAIS FC</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/nf.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Groton House FC</a>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/bha.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">MORAIS FC</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Madison Park High School Boston MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
+                                    <a class="match-location-link" href="#">Madison Park High School Boston MA (turf)</a>
+                                </div>
+                            </div>
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <button class="edit-game-btn">Edit match details</button>
+                                    <a href="#" class="match-more-info-link">Match details</a>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -555,179 +912,52 @@
                 <ul class="match-list">
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Southside F.C.</a>
-                                    <img src="images/sh.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
+                                    <span>FT</span>
+                                    <span class="match-status-official">Official Result</span>
                                 </div>
-                                <div class="match-time">
-                                    <span>7:30 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/ev.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Canalhas FC</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/sh.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Southside F.C.</a>
+                                        <span class="match-team-score match-team-score-loss">0</span>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/ev.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Canalhas FC</a>
+                                        <span class="match-team-score">1</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
+                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Brandeis Turf , 415 South St, Waltham MA</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Taunton Eagles Soccer Club</a>
-                                    <img src="images/ful.png" alt="team logo" class="match-team-logo">
-                                </div>
-                                <div class="match-time">
-                                    <span>8:00 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/spur.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Os Amigos F.C.</a>
+                                    <a class="match-location-link" href="#">Brandeis Turf , 415 South St, Waltham MA</a>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Taunton Sports Club, 33 Baker, Taunton MA
-                                    (grass)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Boston Celtic FC</a>
-                                    <img src="images/mu.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <button class="edit-game-btn">Edit match details</button>
+                                    <a href="#" class="match-more-info-link">Match details</a>
                                 </div>
-                                <div class="match-time">
-                                    <span>8:00 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/bren.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Torres FC</a>
-                                </div>
-                            </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Pingree Elementary School Lovell Field Weymouth
-                                    MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Shake-Shake FC</a>
-                                    <img src="images/wh.png" alt="team logo" class="match-team-logo">
-                                </div>
-                                <div class="match-time">
-                                    <span>10:00 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/wol.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Plymouth FC</a>
-                                </div>
-                            </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Reservation Road Park Hyde Park MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
-                                    </svg>
-                                </a>
                             </div>
                         </div>
                     </li>
@@ -742,180 +972,204 @@
             </div>
             <div class="match-list-container">
                 <h4 class="division-standings-header">Over 30 - 1 North</h4>
+                <!-- List of all matches on given date -->
                 <ul class="match-list">
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Irish Village</a>
-                                    <img src="images/lp.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
+                                    <span>FT</span>
+                                    <span class="match-status-official">Official Result</span>
                                 </div>
-                                <div class="match-time">
-                                    <span>8:00 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/mc.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">CDF Azzurri</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/lp.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Irish Village</a>
+                                        <span class="match-team-score">4</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
+                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/mc.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">CDF Azzurri</a>
+                                        <span class="match-team-score match-team-score-loss">1</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Foss Park Somerville MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
+                                    <a class="match-location-link" href="#">Foss Park Somerville MA (turf)</a>
+                                </div>
+                            </div>
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <button class="edit-game-btn">Edit match details</button>
+                                    <a href="#" class="match-more-info-link">Match details</a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Meadowlark FC</a>
-                                    <img src="images/chelsea.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
+                                    <span>FT-OT</span>
                                 </div>
-                                <div class="match-time">
-                                    <span>8:00 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/arsenal.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Kendall Wanderers</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/chelsea.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Meadowlark FC</a>
+                                        <span class="match-team-score match-team-score-loss">2</span>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/arsenal.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Kendall Wanderers</a>
+                                        <span class="match-team-score">3</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
+                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Danehy Field 1 Cambridge MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
+                                    <a class="match-location-link" href="#">HYSA Fields at Marshall Street -- Field M2 Holliston MA (turf)</a>
+                                </div>
+                            </div>
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <button class="edit-game-btn">Edit match details</button>
+                                    <a href="#" class="match-more-info-link">Match details</a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Eastern FC</a>
-                                    <img src="images/villa.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
+                                    <span>FT-PENS</span>
+                                    <span class="match-status-official">Official Result</span>
                                 </div>
-                                <div class="match-time">
-                                    <span>8:15 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/nc.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Loco Gunners</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/villa.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Eastern FC</a>
+                                        <span class="match-team-score">1</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
+                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/nc.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Loco Gunners</a>
+                                        <span class="match-team-score match-team-score-loss">1</span>
+                                    </div>
+                                    <div class="match-note">
+                                        <span>Eastern FC wins 4-3 on penalties</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Malden Catholic High School Malden MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
+                                    <a class="match-location-link" href="#">Malden Catholic High School Malden MA (turf)</a>
+                                </div>
+                            </div>
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <a href="#" class="match-more-info-link">Match details</a>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Groton House FC</a>
-                                    <img src="images/nf.png" alt="team logo" class="match-team-logo">
-                                </div>
-                                <div class="match-time">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
                                     <span>9:00 AM</span>
                                 </div>
-                                <div class="match-team">
-                                    <img src="images/bha.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">MORAIS FC</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/nf.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Groton House FC</a>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/bha.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">MORAIS FC</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Madison Park High School Boston MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
+                                    <a class="match-location-link" href="#">Madison Park High School Boston MA (turf)</a>
+                                </div>
+                            </div>
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <button class="edit-game-btn">Edit match details</button>
+                                    <a href="#" class="match-more-info-link">Match details</a>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -926,179 +1180,52 @@
                 <ul class="match-list">
                     <li class="match">
                         <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Southside F.C.</a>
-                                    <img src="images/sh.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-2">
+                                <div class="match-status">
+                                    <span>FT</span>
+                                    <span class="match-status-official">Official Result</span>
                                 </div>
-                                <div class="match-time">
-                                    <span>7:30 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/ev.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Canalhas FC</a>
+                                <div class="match-teams">
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/sh.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Southside F.C.</a>
+                                        <span class="match-team-score match-team-score-loss">0</span>
+                                    </div>
+                                    <div class="match-team">
+                                        <a href="#" class="match-team-logo-link">
+                                            <img src="images/ev.png" alt="team logo" class="match-team-logo">
+                                        </a>
+                                        <a href="#" class="match-team-name">Canalhas FC</a>
+                                        <span class="match-team-score">1</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="match-caret" viewBox="0 0 8 16">
+                                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                                        </svg>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Brandeis Turf , 415 South St, Waltham MA</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
+                            <div class="match-details-col-1 match-details-notes">
+                                <div class="match-location">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
+                                        class="match-details-icon">
+                                        <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
+                                        <path d="M3 9h3v6h-3z"></path>
+                                        <path d="M18 9h3v6h-3z"></path>
+                                        <path
+                                            d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
+                                        </path>
+                                        <path d="M12 5l0 14"></path>
                                     </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Taunton Eagles Soccer Club</a>
-                                    <img src="images/ful.png" alt="team logo" class="match-team-logo">
-                                </div>
-                                <div class="match-time">
-                                    <span>8:00 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/spur.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Os Amigos F.C.</a>
+                                    <a class="match-location-link" href="#">Brandeis Turf , 415 South St, Waltham MA</a>
                                 </div>
                             </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Taunton Sports Club, 33 Baker, Taunton MA
-                                    (grass)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Boston Celtic FC</a>
-                                    <img src="images/mu.png" alt="team logo" class="match-team-logo">
+                            <div class="match-details-col-1">
+                                <div class="match-details-btns">
+                                    <button class="edit-game-btn">Edit match details</button>
+                                    <a href="#" class="match-more-info-link">Match details</a>
                                 </div>
-                                <div class="match-time">
-                                    <span>8:00 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/bren.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Torres FC</a>
-                                </div>
-                            </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Pingree Elementary School Lovell Field Weymouth
-                                    MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
-                                    </svg>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="match">
-                        <div class="match-details">
-                            <div class="match-teams">
-                                <div class="match-team">
-                                    <a href="#" class="match-team-name">Shake-Shake FC</a>
-                                    <img src="images/wh.png" alt="team logo" class="match-team-logo">
-                                </div>
-                                <div class="match-time">
-                                    <span>10:00 AM</span>
-                                </div>
-                                <div class="match-team">
-                                    <img src="images/wol.png" alt="team logo" class="match-team-logo">
-                                    <a href="#" class="match-team-name">Plymouth FC</a>
-                                </div>
-                            </div>
-                            <div class="match-location">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1"
-                                    class="match-details-icon">
-                                    <path d="M12 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
-                                    <path d="M3 9h3v6h-3z"></path>
-                                    <path d="M18 9h3v6h-3z"></path>
-                                    <path
-                                        d="M3 5m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z">
-                                    </path>
-                                    <path d="M12 5l0 14"></path>
-                                </svg>
-                                <a class="match-location-link" href="#">Reservation Road Park Hyde Park MA (turf)</a>
-                            </div>
-
-                            <div class="match-more-info">
-                                <a href="#" class="match-more-info-link">
-                                    <span>Match Details</span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                                        stroke-width="1" class="match-details-icon">
-                                        <path d="M5 12l14 0"></path>
-                                        <path d="M15 16l4 -4"></path>
-                                        <path d="M15 8l4 4"></path>
-                                    </svg>
-                                </a>
                             </div>
                         </div>
                     </li>
@@ -1107,6 +1234,7 @@
         </section>
     </main>
     <script src="othsl-mock.js"></script>
+    <script src="formDrawer.js"></script>
 </body>
 
 </html>
