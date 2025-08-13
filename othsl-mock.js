@@ -21,13 +21,27 @@
 //     })
 // })
 
+
+
+
+
 const navHamburger = document.querySelector('.ham-icon')
-const accountIcon = document.querySelector('.acct-icon')
+const accountIcon = document.querySelector('.nav-account-container')
 const leftNav = document.querySelector('.left-nav-pop')
 const rightNav = document.querySelector('.right-nav-pop')
 const leftNavX = document.querySelector('.nav-menu-x-icon')
 const rightNavX = document.querySelector('.acct-menu-x-icon')
 const navOverlay = document.querySelector('.nav-pop-menu-overlay')
+
+// Toggle Logged In vs Logged Out for Top Nav - DEMO ONLY 
+let isLoggedIn = false;
+const loggedOutDisplay = document.querySelector('.nav-log-in-container')
+
+if(isLoggedIn) {
+    loggedOutDisplay.style.display = "none"
+} else {
+    accountIcon.style.display = "none"
+}
 
 function toggleNav(nav) {
     // toggle menu-active class

@@ -33,9 +33,9 @@
                         </a>
                     </div>
                     <ul class="nav-main-links">
-                        <li class="nav-main-link"><a href="schedules.html">Schedules</a></li>
-                        <li class="nav-main-link"><a href="standings.html">Standings</a></li>
-                        <li class="nav-main-link"><a href="divisions.html">Divisions</a></li>
+                        <li class="nav-main-link"><a href="#">Tourneys</a></li>
+                        <li class="nav-main-link"><a href="#">Fields</a></li>
+                        <li class="nav-main-link"><a href="#">FAQ</a></li>
                     </ul>
                 </div>
                 <div class="nav-icon-container mobile-nav-container">
@@ -282,209 +282,51 @@
         </div>
     
         <main>
-            <section class="section-container section-container-intitial">
-                <div class="game-detail-section">
-                    <div class="game-detail-section-header">
-                        <h6 class="game-detail-section-header-content">Over 30 Division 1 North</h6>
+        <section class="form-container">
+            <div class="form-alert">
+                <svg xmlns="http://www.w3.org/2000/svg" class="form-alert-icon" viewBox="0 0 16 16">
+                    <path d="M7.938 2.016A.13.13 0 0 1 8.002 2a.13.13 0 0 1 .063.016.15.15 0 0 1 .054.057l6.857 11.667c.036.06.035.124.002.183a.2.2 0 0 1-.054.06.1.1 0 0 1-.066.017H1.146a.1.1 0 0 1-.066-.017.2.2 0 0 1-.054-.06.18.18 0 0 1 .002-.183L7.884 2.073a.15.15 0 0 1 .054-.057m1.044-.45a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767z"/>
+                    <path d="M7.002 12a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 5.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z"/>
+                </svg>
+                <p class="form-alert-msg form-text"><strong>Have you already registered?</strong> Don’t create a second account — it will freeze your email. If you cannot access your account, contact the State Registrar.</p>
+            </div>
+            <div class="inner-form">
+                <h1 class="form-header">Create an account</h1>
+                <p class="form-instruction form-text">Mass Soccer will verify your email address (used as your username). Please enter your full legal name as it appears on your ID when filling out the form below.</p>
+                <form action="">
+                    <div class="form-group">
+                        <label class="form-label" for="first-name">First name</label>
+                        <input class="form-input" id="first-name" type="text">
                     </div>
-                    <div class="game-detail-matchup-section">
-                        <!-- Should link to team this link contains info on -->
-                        <a href="#" class="game-detail-matchup-team">
-                            <div class="game-detail-matchup-team-info">
-                                <h2 class="game-detail-matchup-team-name">Eastern FC</h2>
-                                <span>Home Team</span>
-                            </div>
-                            <div class="game-detail-matchup-team-logo">
-                                <img src="images/villa.png" alt="team logo">
-                            </div>
-                        </a>
-                        <!-- This section is dynamic and changes based off of date and access level -->
-                        <div class="game-detail-score">
-                            <form action="" class="score-form">
-                                <div class="score-form-group">
-                                    <label for="away-score"></label>
-                                    <input class="score-input score-input-win" type="text" id="home-score" name="home-score" value="3" readonly aria-describedby="score-input-locked">
-                                    <span class="score-dash"></span>
-                                    <input class="score-input" type="text" id="away-score" name="away-score" value="2" readonly aria-describedby="score-input-locked">
-                                    <p id="score-input-locked">Score Locked</p>
-                                </div>
-                            </form>
-                        </div>
-                        <!-- Should link to team this link contains info on -->
-                        <a href="team.html" class="game-detail-matchup-team">
-                            <div class="game-detail-matchup-team-logo">
-                                <img src="images/iv_logo.png" alt="team logo">
-                            </div>
-                            <div class="game-detail-matchup-team-info">
-                                <h2 class="game-detail-matchup-team-name">Irish Village</h2>
-                                <span>Away Team</span>
-                            </div>
-                        </a>
+                    <div class="form-group">
+                        <label class="form-label" for="">Last name</label>
+                        <input class="form-input" type="text">
                     </div>
-                </div>
-            </section>
-            <section class="section-container">
-                <div class="game-detail-section">
-                    <div class="game-detail-location-header">
-                        <p class="game-detail-location-field">Game Location: <span>Foss Park Somerville MA <span
-                                    class="game-detail-location-underline">(turf)</span> - 49
-                                Fellsway W,
-                                Somerville, MA</span></p>
-                        <p class="game-detail-location-code">USO Field Code: <span>5782</span></p>
+
+                    <div class="form-group">
+                        <label class="form-label" for="">Email</label>
+                        <input class="form-input" type="text">
                     </div>
-                    <div class="game-detail-map">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.722355640539!2d-71.09142492388911!3d42.39106077118995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37084d359498b%3A0x4137687df1e0b676!2s49%20Fellsway%20W%2C%20Somerville%2C%20MA%2002145!5e0!3m2!1sen!2sus!4v1745769150098!5m2!1sen!2sus"
-                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <div class="form-group">
+                        <label class="form-label" for="">Cell phone</label>
+                        <div class="form-hint">xxx-xxx-xxx</div>
+                        <input class="form-input" type="text">
                     </div>
-                </div>
-            </section>
-            <!-- This section should only be viewable by users with Manger+ Access-->
-            <section class="section-container">
-                <div class="game-detail-section">
-                    <div class="game-detail-section-header">
-                        <h6 class="game-detail-section-header-content">Referee and Roster Information</h6>
+                    <div class="form-group">
+                        <label class="form-label" for="">Create password</label>
+                        <div class="form-hint form-text">Your password can’t be too similar to your other personal information.</div>
+                        <div class="form-hint form-text">Your password must contain at least 8 characters.</div>
+                        <div class="form-hint form-text">Your password can’t be a commonly used password.</div>
+                        <div class="form-hint form-text">Your password can’t be entirely numeric.</div>
+                        <input class="form-input" type="password">
                     </div>
-                    <ul class="game-detail-links-container">
-                        <!-- Links TBD - need info on where/how to access info -->
-                        <li class="game-detail-link"><a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-person-badge" viewBox="0 0 16 16">
-                                    <path d="M6.5 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1zM11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0">
-                                    </path>
-                                    <path
-                                        d="M4.5 0A2.5 2.5 0 0 0 2 2.5V14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2.5A2.5 2.5 0 0 0 11.5 0zM3 2.5A1.5 1.5 0 0 1 4.5 1h7A1.5 1.5 0 0 1 13 2.5v10.795a4.2 4.2 0 0 0-.776-.492C11.392 12.387 10.063 12 8 12s-3.392.387-4.224.803a4.2 4.2 0 0 0-.776.492z">
-                                    </path>
-                                </svg>
-                                <span>
-                                    View Referee Information
-                                </span>
-                            </a></li>
-                        <li class="game-detail-link"><a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-filetype-pdf" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z" />
-                                </svg>
-                                <span>
-                                    View Eastern FC Roster
-                                </span>
-                            </a></li>
-                        <li class="game-detail-link"><a href="#">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-filetype-pdf" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM1.6 11.85H0v3.999h.791v-1.342h.803q.43 0 .732-.173.305-.175.463-.474a1.4 1.4 0 0 0 .161-.677q0-.375-.158-.677a1.2 1.2 0 0 0-.46-.477q-.3-.18-.732-.179m.545 1.333a.8.8 0 0 1-.085.38.57.57 0 0 1-.238.241.8.8 0 0 1-.375.082H.788V12.48h.66q.327 0 .512.181.185.183.185.522m1.217-1.333v3.999h1.46q.602 0 .998-.237a1.45 1.45 0 0 0 .595-.689q.196-.45.196-1.084 0-.63-.196-1.075a1.43 1.43 0 0 0-.589-.68q-.396-.234-1.005-.234zm.791.645h.563q.371 0 .609.152a.9.9 0 0 1 .354.454q.118.302.118.753a2.3 2.3 0 0 1-.068.592 1.1 1.1 0 0 1-.196.422.8.8 0 0 1-.334.252 1.3 1.3 0 0 1-.483.082h-.563zm3.743 1.763v1.591h-.79V11.85h2.548v.653H7.896v1.117h1.606v.638z" />
-                                </svg>
-                                <span>
-                                    View Irish Village Roster
-                                </span>
-                            </a></li>
-                    </ul>
-                </div>
-            </section>
-            <section class="section-container">
-                <div class="game-detail-section">
-                    <div class="game-detail-section-header">
-                        <h6 class="game-detail-section-header-content">Card Histories</h6>
+                    <div class="form-group">
+                        <label class="form-label" for="">Re-type your password</label>
+                        <input class="form-input" type="password">
                     </div>
-                    <div class="section-header-dropdown-containers">
-                        <!-- Filter by Section -->
-                        <div class="section-header-dropdown-container">
-                            <span class="section-header-dropdown-label">Sort by</span>
-                            <div class="section-header-dropdown">
-                                <select class="section-header-select">
-                                    <option value="All" selected>Date</option>
-                                    <option value="Over 30">Team</option>
-                                    <option value="Over 40">Player</option>
-                                </select>
-                                <div class="section-header-dropdown-carrot">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="carrot-down"
-                                        viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd"
-                                            d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708" />
-                                    </svg>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="division-standings-container">
-                        <div class="division-standings">
-                            <!-- Table should show card information for both teams in matchup -->
-                            <table class="division-cards-table">
-                                <thead>
-                                    <tr>
-                                        <th class="cards-table-header">Date</th>
-                                        <th class="cards-table-header-large">Team</th>
-                                        <th class="cards-table-header-large">Player</th>
-                                        <th class="cards-table-header-large">ID Number</th>
-                                        <th class="cards-table-header">Type</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td class="cards-table-cell">4/6</td>
-                                        <td class="cards-table-cell-large">Irish Village</td>
-                                        <td class="cards-table-cell-large">Luiny Ascencio</td>
-                                        <td class="cards-table-cell-large">MA1200328221</td>
-                                        <td class="cards-table-cell">
-                                            <div class="yellow-card"></div>
-                                            <div class="yellow-card"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cards-table-cell">4/6</td>
-                                        <td class="cards-table-cell-large">Irish Village</td>
-                                        <td class="cards-table-cell-large">Silas Da Silva</td>
-                                        <td class="cards-table-cell-large">MA2416052528</td>
-                                        <td class="cards-table-cell">
-                                            <div class="red-card"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cards-table-cell">4/13</td>
-                                        <td class="cards-table-cell-large">Eastern FC</td>
-                                        <td class="cards-table-cell-large">Michael DiFronzo</td>
-                                        <td class="cards-table-cell-large">MA1201130017</td>
-                                        <td class="cards-table-cell">
-                                            <div class="yellow-card"></div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="cards-table-cell">4/13</td>
-                                        <td class="cards-table-cell-large">Eastern FC</td>
-                                        <td class="cards-table-cell-large">Jeffrey Corey</td>
-                                        <td class="cards-table-cell-large">MA1200614926</td>
-                                        <td class="cards-table-cell">
-                                            <div class="yellow-card"></div>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section-container">
-                <div class="game-detail-section">
-                    <div class="game-detail-section-header">
-                        <h6 class="game-detail-section-header-content">Game News</h6>
-                    </div>
-                </div>
-                <div class="section-announcement-container">
-                    <div class="section-announcement-icon-container">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-exclamation-circle" viewBox="0 0 16 16">
-                            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                            <path
-                                d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
-                        </svg>
-                    </div>
-                    <h4 class="section-announcement-text">Game time changed from 9:00 AM to 8:00 AM</h4>
-                </div>
-            </section>
-        </main>
-        <script src="othsl-mock.js"></script>
+                    <button class="form-submit-btn" type="submit">Create an account</button>
+                </form>
+            </div>
+        </section>
     </body>
 </html>

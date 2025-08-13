@@ -83,93 +83,83 @@ nav {
     align-items: center;
 }
 
-.nav-icon-container {
-    display: flex;
-    align-items: center;
-}
-
-.nav-icon,
-.nav-pop-menu-button-x,
-.acct-menu-x-icon,
-.nav-menu-pop-header {
-    cursor: pointer;
-}
-
 .nav-responsive-container {
     display: flex;
     align-items: center;
     gap: 40px;
 }
 
-.nav-main-links {
+.nav-icon-container {
+    display: flex;
+    align-items: center;
+}
+
+.mobile-nav-container {
     display: none;
+}
+
+.nav-icon,
+.nav-pop-menu-button-x,
+.acct-menu-x-icon,
+.nav-menu-pop-header,
+.nav-account-container {
+    cursor: pointer;
+}
+
+.nav-main-links {
+    display: flex;
+    gap: 20px;
 }
 
 .nav-main-link a {
     padding: 15px 8px;
     color: white;
     font-weight: 600;
-    font-size: 15px;
+    font-size: 17px;
     cursor: pointer;
 }
 
-.nav-main-link a:hover {
-    text-decoration: underline;
-}
-
-.nav-desktop-account-container {
-    display: none;
-}
-
-.nav-desktop-account-text {
+.nav-account-container {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
 }
 
-.nav-desktop-account-text span {
+.nav-account-text,
+.nav-log-in-text {
     color: white;
-    font-size: 13px;
+    font-weight: 600;
+    font-size: 17px;
 }
 
-.nav-desktop-account-text span:last-of-type {
-    font-weight: 700;
-}
-
-@media (min-width: 768px) {
-    .mobile-nav-container {
-        display: none;
-    }
-
-    .nav-desktop-account-container {
-        display: block;
-    }
-
-    .nav-desktop-account-container a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 8px;
-        padding: 6px 14px;
-        border: 1px solid white;
-        border-radius: 12px;
-    }
-
-    .nav-main-links {
-        display: flex;
-        gap: 20px;
-    }
-}
-
-@media (min-width: 900px) {
+@media (max-width: 900px) {
     .nav-main-links {
         gap: 35px;
     }
 
     .nav-main-link a {
-        font-size: 17px;
+        font-size: 15px;
+    }
+
+    .nav-account-text {
+        display: none;
     }
 }
 
+@media (max-width: 768px) {
+    .mobile-nav-container {
+        display: block;
+    }
+
+    .nav-desktop-account-link {
+        display: none;
+    }
+
+    .nav-main-links {
+        display: none;
+    }
+}
 
 svg.nav-icon {
     padding: 6px;
@@ -184,7 +174,6 @@ svg.acct-icon-solid {
 .nav-logo-container {
     display: flex;
     align-items: center;
-    margin: 3px 0;
 }
 
 .nav-logo-container a {
@@ -192,24 +181,50 @@ svg.acct-icon-solid {
 }
 
 .nav-logo {
-    width: 50px;
+    height: 60px;
+    margin: 10px 0;
 }
 
-@media (min-width: 768px) {
+@media (max-width: 768px) {
     .nav-logo {
-        width: 70px;
+       height: 50px;
     }
 }
 
-@media (min-width: 900px) {
-    svg.nav-icon {
-        width: 45px;
-    }
+.nav-log-in-link {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+}
 
-    .nav-logo {
-        width: 80px;
-    }
+.nav-sign-up-link {
+    background: #fff;
+    padding: 4px 12px;
+    border-radius: 30px;
+}
 
+.nav-sign-up-link:hover {
+    background: #f4f4f4;
+}
+
+.nav-sign-up-text {
+    color: #0D274C;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+@media (max-width: 900px) {
+    .nav-log-in-text,
+    .nav-sign-up-text{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-sign-up-link,
+    .nav-log-in-text {
+        display: none;
+    }
 }
 
 .nav-pop-menu-overlay {
@@ -268,6 +283,8 @@ svg.acct-icon-solid {
 .nav-pop-menu-navigation-right {
     position: fixed;
     right: 0;
+    width: 100%;
+    max-width: 400px;
 }
 
 .nav-pop-menu-navigation-header {
@@ -320,7 +337,7 @@ svg.acct-icon-solid {
 }
 
 .nav-menu-pop-link a span {
-    font-size: 14px;
+    font-size: 17px;
     line-height: 23px;
     padding-top: 6px;
     padding-bottom: 6px;
@@ -336,6 +353,7 @@ svg.acct-icon-solid {
 .nav-menu-pop-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding-top: 10px;
     padding-right: 16px;
     padding-bottom: 10px;
@@ -344,17 +362,14 @@ svg.acct-icon-solid {
 
 .nav-menu-pop-header-text {
     display: block;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1.2px;
-    color: rgba(87 111 118 / 1);
-    text-transform: uppercase;
+    font-size: 17px;
+    line-height: 23px;
+    color: rgb(31, 35, 40);
 }
 
 .nav-menu-pop-header-icon {
-    width: 18px;
-    height: 18px;
-
+    width: 16px;
+    height: 16px;
 }
 
 .icon-rotate {
@@ -369,6 +384,11 @@ svg.acct-icon-solid {
     padding-bottom: 4px;
     padding-left: 16px;
     font-size: 15px;
+}
+
+.nav-menu-pop-sub-link-league {
+    font-size: 14px;
+    color: rgba(87 111 118 / 1);
 }
 
 .sub-list-inactive {
@@ -414,7 +434,7 @@ svg.acct-icon-solid {
 }
 
 .nav-menu-pop-account-header-text {
-    font-size: 13px;
+    font-size: 17px;
     font-weight: 700;
 }
 
@@ -426,7 +446,7 @@ svg.acct-icon-solid {
     width: 100%;
     padding-top: 10px;
     padding-bottom: 10px;
-    font-size: 15px;
+    font-size: 17px;
     border-radius: 5px;
     background-color: #0D274C;
     color: white;
@@ -434,7 +454,7 @@ svg.acct-icon-solid {
 }
 
 .nav-menu-manage-acount-icon {
-    width: 22px;
+    width: 20px;
 }
 
 .nav-menu-id-card {
@@ -464,7 +484,7 @@ svg.acct-icon-solid {
 
 .nav-menu-upcoming-games-status span,
 .nav-menu-upcoming-games-date span {
-    font-size: 12px;
+    font-size: 14px;
     color: rgba(87 111 118 / 1);
 }
 
@@ -497,7 +517,7 @@ svg.acct-icon-solid {
 
 .nav-menu-upcoming-games-matchup span,
 .nav-menu-upcoming-games-matchup-team span {
-    font-size: 13px;
+    font-size: 15px;
     line-height: 1.2;
 }
 
@@ -514,28 +534,24 @@ svg.acct-icon-solid {
 
 .nav-menu-upcoming-games-location a {
     color: rgba(9 105 218);
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 14px;
     line-height: 1.2;
     text-decoration: underline;
 }
 
+
+
 .nav-menu-logout-link {
     display: flex;
     gap: 5px;
-    padding-top: 10px;
-    padding-right: 16px;
-    padding-bottom: 10px;
-    padding-left: 16px;
+    padding: 10px 16px;
     font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 1.2px;
-    color: rgba(87 111 118 / 1);
-    text-transform: uppercase;
+    color: rgb(31, 35, 40);
 }
 
 .nav-menu-logout-icon {
-    width: 18px;
+    width: 20px;
+    fill: rgb(31, 35, 40);
 }
 
 /* main content CSS */
@@ -550,6 +566,13 @@ main {
     padding-right: 10px;
     background-color: #f6f8f7;
     min-height: 100vh;
+}
+
+@media (max-width: 500px) {
+    main {
+        padding-left: 0;
+        padding-right: 0;
+    }
 }
 
 .main-container {
@@ -830,3 +853,4 @@ header.bssl-nav-container {
     width: 70px;
     margin: 10px 0;
 } */
+

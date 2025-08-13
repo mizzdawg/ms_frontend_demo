@@ -9,17 +9,55 @@ main {
     flex-direction: column;
 }
 
-.section-container {
+.main-with-sticky-offset {
+    padding-top: 0;
+    margin-top: 90px;
+}
+
+.section-container,
+.section-split-container {
+    position: relative;
     width: 100%;
     max-width: 1248px;
     margin-bottom: 12px;
+}
+
+.section-split-container {
+    display: flex;
+    gap:12px;
+}
+
+.section-container,
+.split-container-remainder,
+.split-container-main {
     padding: 20px;
     background-color: rgba(255 255 255 / 1);
     border-radius: 4px;
 }
 
+.split-container-remainder {
+    flex-grow: 1;
+}
+
+.split-container-main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
 .section-container-intitial {
     margin-top: 24px;
+}
+
+.section-container-sticky {
+    position: sticky;
+    max-width: none;
+    top: 80px;
+    z-index: 4;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 0;
 }
 
 .section-header-container {
@@ -43,8 +81,24 @@ main {
 }
 
 @media (max-width: 768px) {
+    .main-with-sticky-offset {
+        margin-top: 80px;
+    }
+
+    .section-container-sticky {
+        top: 70px;
+    }
+
     .section-header-dropdown-containers {
         flex-direction: column
+    }
+
+    .section-split-container {
+        flex-direction: column;
+    }
+
+    .split-container-main {
+        width: 100%;
     }
 }
 
@@ -176,13 +230,13 @@ main {
 }
 
 .section-announcement-container {
-    margin-block: 20px;
-    padding: 16px;
+    margin-block: 8px;
+    padding: 6px 16px;
     display: flex;
     gap: 8px;
-    background-color: rgba(211 227 253 / 1);
+    color: rgba(1 67 97 / 1);
+    background-color: rgba(229 246 253 / 1);
     border-radius: 6px;
-    border: 1px solid #BDCCE3;
 }
 
 .section-announcement-text {
@@ -247,7 +301,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 52px;
+    min-width: 48px;
     flex: 1;
 }
 
@@ -263,6 +317,10 @@ main {
     font-weight: 400;
     font-family: 'Roboto', sans-serif;
     border-bottom: 1px solid #e0e0e0;
+}
+
+.division-standings-table tbody tr.standings-table-playoff-line {
+    border-bottom: 2px solid rgb(59, 118, 171);
 }
 
 .division-standings-table tbody tr:nth-child(odd),
@@ -295,7 +353,19 @@ main {
     .division-standings-table tbody tr:nth-child(odd) td:first-of-type {
         background-color: #fafafa;
     }
+}
 
+@media (max-width:500px) {
+    .standings-table-header-team {
+        width: 175px;
+    }
+
+    .division-standings-table tbody tr,
+    .division-cards-table tbody tr {
+        height: 45px;
+        font-size: 14px;
+        line-height: 14px;
+    }
 }
 
 .standings-table-team-cell {
@@ -309,6 +379,28 @@ main {
     width: 220px;
     height: 100%;
     z-index: 2;
+}
+
+.standings-promotion-container {
+    position: relative;
+    height: 100%;
+}
+
+.standings-promotion-detail,
+.standings-relegation-detail {
+    position: absolute;
+    left: -8px;
+    top: 0;
+    height: 100%;
+    width: 5px;
+}
+
+.standings-promotion-detail {
+    background: rgb(52, 168, 83);
+}
+
+.standings-relegation-detail {
+    background: rgb(234, 67, 53);
 }
 
 .standings-position {
@@ -335,15 +427,26 @@ main {
     width: 32px;
 }
 
+.standings-champion-icon {
+    margin: 0 4px;
+    width: 16px;
+    height: 16px;
+    fill: rgb(218, 165, 32);
+}
+
 .standings-table-team-cell a span {
     font-weight: 700;
     padding-left: 6px;
+    max-width: 135px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .standings-table-cell {
     display: flex;
     flex: 1;
-    min-width: 52px;
+    min-width: 48px;
     justify-content: center;
 }
 
@@ -355,21 +458,30 @@ main {
     color: rgb(179, 15, 15);
 }
 
-.standings-position-promotion {
-    background-color: rgba(0 190 20 / .4);
+@media (max-width:500px) {
+    .standings-table-team-cell {
+        width: 175px;
+    }
+    .standings-table-team-cell a {
+        padding-left: 5px;
+        padding-right: 8px;
 }
 
-.standings-position-relegation {
-    background-color: rgba(255 0 13 / .4);
+    .standings-table-team-cell a img {
+        width: 24px;
+    }
 }
 
 .standings-table-key {
     width: 100%;
-    padding-block: 10px;
+    padding: 10px;
+    background: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
 }
 
 .standings-table-key .division-standings-header {
-    margin-top: 20px;
+    margin-top: 0;
 }
 
 .standings-table-key-items {
@@ -380,21 +492,35 @@ main {
 
 .standings-table-key-item {
     display: flex;
+    align-items: center;
     gap: 5px;
 }
 
+.champions-key {
+    width: 16px;
+    height: 16px;
+    fill: rgb(218, 165, 32);
+}
+
 .promotion-key {
-    width: 18px;
-    height: 18px;
-    border-radius: 8px;
-    background-color: rgba(0 190 20 / .4);
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    background: rgb(52, 168, 83);
 }
 
 .relegation-key {
-    width: 18px;
-    height: 18px;
-    border-radius: 8px;
-    background-color: rgba(255 0 13 / .4);
+    width: 14px;
+    height: 14px;
+    border-radius: 4px;
+    background: rgb(234, 67, 53);
+}
+
+.playoffs-key {
+    width: 20px;
+    height: 4px;
+    border-radius: 4px;
+    background: rgb(59, 118, 171);
 }
 
 .standings-table-key-item p {
@@ -402,7 +528,8 @@ main {
     font-family: 'Roboto', sans-serif;
 }
 
-@media (max-width:480px) {
+
+@media (max-width:768px) {
     .standings-table-key-items {
         flex-direction: column;
         gap: 20px;
@@ -463,6 +590,7 @@ main {
 
 
 /* SCHEDULE CSS */
+
 .match-list-container {
     width: 100%;
     margin-top: 8px;
@@ -477,6 +605,7 @@ main {
 .match-details {
     display: flex;
     justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 
@@ -486,8 +615,8 @@ main {
     }
 }
 
-.match-details-col-1,
-.match-details-col-2 {
+.match-general-info,
+.match-locations-notes {
     padding: 12px;
     border-right: 1px solid #edeef0;
 }
@@ -498,6 +627,22 @@ main {
 
 .match-details-col-2 {
     flex-grow: 1;
+}
+
+.match-general-info {
+    order:1;
+    flex-grow: 1;
+}
+
+.match-locations-notes {
+    order: 2;
+    width: 30%;
+}
+
+.match-more-details {
+    order: 3;
+    width: 30%;
+    padding: 12px;
 }
 
 .match-status {
@@ -563,12 +708,6 @@ main {
     right: -13px;
 }
 
-.match-note {
-    margin-top: 8px;
-    color: #6c6d6f;
-    font-size: 12px;
-}
-
 .match-location {
     display: flex;
     align-items: center;
@@ -604,12 +743,12 @@ main {
 
 
 .edit-game-btn {
-    margin-bottom: 8px;
     color: rgb(12,16,20);
     background: rgb(239,239,239);
 }
 
 .match-more-info-link {
+    margin-bottom: 8px;
     color: white;
     background: rgb(74, 93, 249)
 }
@@ -638,6 +777,100 @@ main {
 
 .match-more-info-link:hover {
     background: rgb(65, 80, 247);
+}
+
+.match-list-byes {
+    margin-top: 20px;
+    padding: 12px;
+    border: 1px solid #edeef0;
+    border-radius: 8px;
+}
+
+.match-list-byes-text {
+    margin-bottom: 8px;
+    color: #48494a;
+    font-size: 13px;
+}
+
+.match-list-byes-teams {
+    display: flex;
+    flex-wrap: wrap;
+    gap:20px;
+}
+
+@media (max-width: 980px) {
+    .match-general-info {
+        flex-grow: 0;
+        width: 60%;
+        padding-left: 0;
+    }
+
+    .match-locations-notes {
+        order: 3;
+        width: 100%;
+        border-right: none;
+    }
+
+    .match-more-details {
+        order: 2;
+        width: 40%;
+        padding-right: 0;
+    }
+
+    .match-details-col-1 {
+        width: 40%;
+    }
+
+    .match-details-col-2 {
+        padding-left: 0;
+    }
+    
+    .match-teams {
+        width: 100%;
+    }
+
+    .match-team-logo {
+        width: 24px;
+        margin-right: 4px;
+    }
+
+    .match-location-link {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 525px) {
+    .match-general-info {
+        width: 50%;
+    }
+
+    .match-more-details {
+        width: 50%;
+    }
+
+    .match-details-col-1 {
+        width: 50%;
+    }
+
+    .match-status {
+        font-size: 11px;
+    }
+
+    .match-team-name {
+        font-size: 13px;
+    }
+
+    .match-team-score {
+        font-size: 15px;
+        padding-left: 2px;
+        background: #fff;
+    }
+    
+    .edit-game-btn,
+    .match-more-info-link {
+        padding: 7px 12px;
+        font-size: 13px;
+    }
 }
 
 .match-notes {
@@ -679,58 +912,6 @@ main {
     }
 }
 
-@media (max-width: 980px) {
-    .match-details-col-1 {
-        width: 40%;
-    }
-
-    .match-details-col-2 {
-        padding-left: 0;
-    }
-    
-    .match-teams {
-        width: 100%;
-    }
-
-    .match-details-notes {
-        display: none;
-    }
-
-    .match-team-logo {
-        width: 24px;
-        margin-right: 4px;
-    }
-
-    .match-location-link {
-        max-width: 100%;
-    }
-}
-
-@media (max-width: 525px) {
-    .match-details-col-1 {
-        width: 50%;
-    }
-
-    .match-status {
-        font-size: 11px;
-    }
-
-    .match-team-name {
-        font-size: 13px;
-    }
-
-    .match-team-score {
-        font-size: 15px;
-        padding-left: 2px;
-        background: #fff;
-    }
-    
-    .edit-game-btn,
-    .match-more-info-link {
-        padding: 7px 12px;
-        font-size: 13px;
-}
-}
 
 /* DIVISIONS PAGE CSS */
 .divisions-list-container {
@@ -803,21 +984,28 @@ main {
 }
 
 .game-detail-section-header {
-    margin-bottom: 8px;
-    padding-bottom: 20px;
+    padding-bottom: 8px;
     text-align: center;
     border-bottom: 1px solid rgba(235 233 233 / 1);
 }
 
+.game-detail-sticky-section-header-content {
+    color: rgba(108, 109, 111, 1);
+    font-size: 13px;
+    font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
+}
+
 .game-detail-section-header-content {
-    font-size: 17px;
-    font-weight: 600;
-    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(31, 31, 31);
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .game-detail-matchup-section {
     width: 100%;
-    margin-top: 20px;
+    margin-top: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -827,7 +1015,6 @@ main {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px;
 }
 
 .game-detail-matchup-team-info {
@@ -840,6 +1027,8 @@ main {
     line-height: 20px;
     font-weight: 600;
 }
+
+/* removed this label from HTML (HOME TEAM, AWAY TEAM) */
 
 .game-detail-matchup-team-info span {
     margin: 0;
@@ -856,6 +1045,7 @@ main {
 .game-detail-matchup-info {
     display: flex;
     flex-direction: column;
+    gap: 5px;
     padding-left: 60px;
     padding-right: 60px;
     text-align: center;
@@ -874,17 +1064,13 @@ main {
 }
 
 @media (max-width: 767px) {
-    .game-detail-section-header-content {
-        font-size: 14px;
-    }
-
     .game-detail-matchup-team-name {
         font-size: 17px;
         line-height: 20px;
     }
 
     .game-detail-matchup-team-logo {
-        width: 40px;
+        width: 45px;
     }
 
     .game-detail-matchup-info {
@@ -907,9 +1093,18 @@ main {
     }
 
     .game-detail-matchup-team {
+        flex-direction: column;
         gap: 5px;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .game-detail-matchup-team-logo {
+        order: 1;
+    }
+
+    .game-detail-matchup-team-info {
+        order: 2;
     }
 
     .game-detail-matchup-team-name {
@@ -917,9 +1112,7 @@ main {
         line-height: 18px;
     }
 
-    .game-detail-matchup-team-logo {
-        width: 30px;
-    }
+
 
     .game-detail-matchup-info {
         padding-left: 10px;
@@ -928,10 +1121,6 @@ main {
 }
 
 @media (max-width: 415px) {
-    .game-detail-matchup-team-name {
-        font-size: 14px;
-        line-height: 17px;
-    }
 
     .game-detail-matchup-info {
         padding-left: 7px;
@@ -1065,31 +1254,18 @@ main {
  }
 
 /* Location Details CSS */
-.game-detail-location-header {
+.game-detail-header {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 8px;
-    padding-bottom: 20px;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
     border-bottom: 1px solid rgba(235 233 233 / 1);
 }
 
 .game-detail-location-field {
-    max-width: 775px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
-.game-detail-location-field,
-.game-detail-location-code {
-    font-size: 15px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 1.3;
     font-weight: 400;
-}
-
-.game-detail-location-field span,
-.game-detail-location-code span {
-    font-weight: 700;
 }
 
 .game-detail-location-underline {
@@ -1097,7 +1273,9 @@ main {
 }
 
 .game-detail-map {
-    margin-top: 20px;
+    margin-top: 1em;
+    flex: 1;
+    display: flex;
 }
 
 @media (max-width: 1020px) {
@@ -1120,15 +1298,79 @@ main {
     }
 }
 
+/* Game Details Page -- Team Stats Section */
+.game-detail-team-stats-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    border-bottom: 1px solid rgba(235 233 233 / 1);
+}
+
+.game-detail-team-stats-team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+}
+
+.game-detail-team-stats-team-logo {
+    width: 40px;
+    padding-right: .5em;
+}
+
+.game-detail-team-stats-team-name {
+    color: rgb(31 31 31 / 1);
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap;        
+    overflow: hidden;          
+    text-overflow: ellipsis; 
+}
+
+.game-detail-team-stats-row {
+    display: flex;
+    color: rgb(31 31 31 / 1);
+    font-size: 14px;
+    border-bottom: 1px solid rgba(235 233 233 / 1);
+}
+
+.game-detail-team-stat,
+.game-detail-team-stat-label {
+    padding: 1em 0;
+}
+
+.game-detail-team-stat {
+    width: 37%;
+    text-align: center;
+}
+
+.game-detail-team-stat-highlight {
+    color: rgba(30 70 32 / 1);
+    font-weight: 700;
+    background-color: rgba(237 247 237 / 1);
+}
+
+.game-detail-team-stat-label {
+    width: 26%;
+    text-align: center;
+    font-weight: 700;
+    border-left: 1px solid rgba(235 233 233 / 1);
+    border-right: 1px solid rgba(235 233 233 / 1);
+}
+
 /* Game Details - Manager+ Links Section */
 
+.game-detail-links-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .game-detail-link {
-    width: auto;
-    margin: 10px 0;
+    width: 30%;
+    margin-top: 1em;
 }
 
 .game-detail-link a {
-    width: 225px;
     padding: 6px 0;
     display: flex;
     justify-content: center;
@@ -1143,6 +1385,16 @@ main {
 
 .game-detail-link a:hover {
     background-color: #0b63e3;
+}
+
+@media (max-width: 768px) {
+    .game-detail-links-container {
+        flex-direction: column;
+    }
+
+    .game-detail-link {
+        width: 100%;
+    }
 }
 
 /* Team Page CSS */
@@ -1677,4 +1929,153 @@ input.edit-end-option:checked + .edit-end-radio-mark::after {
 /* PLACEHOLDER CSS FOR EDIT GAME DETAILS MODULES */
 
 
+/*
+////////////
 
+Registration Form CSS
+
+////////////
+*/
+
+.form-container {
+    max-width: 1020px;
+    width: auto;
+    padding: 30px;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    text-align: left;
+    color: rgb(11, 12, 12);
+    border: 1px solid rgb(219,219,219);
+    border-radius: 8px;
+    background: #fff;
+}
+
+.form-alert {
+    display: flex;
+    align-items: flex-start;
+    padding: 12px 16px;
+    border: 1px solid rgb(66, 153, 225);
+    border-radius: 8px;
+    background: rgb(235, 248, 255);
+}
+
+.form-alert-icon {
+    margin-right: 10px;
+    fill: rgb(43, 108, 176);
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.form-alert-msg {
+    color: rgb(43, 108, 176);
+    font-size: 16px;
+}
+
+.inner-form {
+    width: 100%;
+}
+
+.form-header {
+    margin: 30px 0 60px;
+    font-size: 40px;
+}
+
+.form-text {
+    max-width: 720px;
+}
+
+.form-instruction {
+    margin-bottom: 25px;
+    font-size: 20px;
+    line-height: 1.25;
+}
+
+.form-group {
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.form-hint {
+    margin: 8px 0 5px;
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 400;
+    color: rgb(111, 119, 123);
+}
+
+.form-input {
+    width: 50%;
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 17px;
+    line-height: 1.25;
+    font-weight: 400;
+    border: 1px solid #4F4F4F;
+    border-radius: 8px;
+}
+
+
+
+.form-submit-btn {
+    padding: 8px 20px;
+    font-family: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    background: rgb(0,112,60);
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.form-submit-btn:hover {
+    background-color: rgb(0,100,54);
+}
+
+.form-submit-btn:active {
+    background-color: rgb(0,100,54);
+    transform: scale(.98);
+}
+
+@media (max-width:768px) {
+
+    .form-alert-icon {
+        width: 18px;
+        height: 18px;
+    }
+
+.form-alert-msg {
+    font-size: 15px;
+}
+
+    .form-header {
+        font-size: 30px;
+        margin: 25px 0 40px;
+    }
+
+    .form-instruction {
+        font-size: 17px;
+    }
+
+    .form-label {
+        font-size: 18px;
+    }
+
+    .form-hint {
+        font-size: 15px;
+    }
+    
+    .form-input {
+        width:100%;
+    }
+
+    .form-submit-btn {
+        width: 100%;
+    }
+}
