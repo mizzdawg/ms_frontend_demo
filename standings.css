@@ -1327,6 +1327,10 @@ main {
 /* Team Page Header CSS */
 
 .team-page-header-container {
+    width: 100%;
+    max-width: 1248px;
+    margin: auto;
+    padding-top: 8px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -1336,10 +1340,16 @@ main {
     width: 100px;
 }
 
-.team-page-header-division {
-    font-size: 18px;
+.team-page-header {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.team-page-header-record {
+    padding-top: .25em;
+    font-size: 1rem;
     font-weight: 300;
-    font-family: 'Roboto Condensed', sans-serif;
 }
 
 .team-page-subheader {
@@ -1348,6 +1358,16 @@ main {
     font-size: 20px;
     line-height: 22px;
     font-family: 'Roboto Condensed', sans-serif;
+}
+
+@media (max-width:767px) {
+    .team-page-header-container img {
+        width: 80px;
+    }
+
+    .team-page-header {
+        font-size: 1.5rem;
+    }
 }
 
 /* Team Page Main Team Info Section */
@@ -1367,10 +1387,9 @@ main {
 }
 
 .team-page-contact {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
+    width: 100%;
     padding: 15px 0;
     border-bottom: 1px solid rgba(235 233 233 / 1);
 }
@@ -1380,9 +1399,7 @@ main {
 }
 
 .team-page-contact-person {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    margin-right: 1em;
 }
 
 .team-page-contact-person-photo {
@@ -1408,9 +1425,13 @@ main {
 .team-page-contact-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
+    gap: .25em;
 }
 
+
+
+.team-page-contact-text,
 .team-page-field-text {
     font-size: 14px;
 }
@@ -1446,12 +1467,6 @@ main {
 }
 
 @media (max-width: 525px) {
-    .team-page-contact {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
     .team-page-contact-person-name {
         font-size: 15px;
     }
@@ -1460,9 +1475,6 @@ main {
         font-size: 14px;
     }
 
-    .team-page-contact-info {
-        align-items: flex-start;
-    }
 }
 
 /* Team Page Home Field Info Section */
