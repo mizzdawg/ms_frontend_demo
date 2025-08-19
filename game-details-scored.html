@@ -37,25 +37,25 @@
                     <li class="nav-main-link"><a href="divisions.html">Divisions</a></li>
                 </ul>
             </div>
-            <div class="nav-icon-container mobile-nav-container">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon acct-icon"
-                    viewBox="0 0 16 16">
+            <div class="nav-icon-container nav-account-container">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
                     <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                     <path fill-rule="evenodd"
                         d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                 </svg>
+                <span class="nav-account-text">Account</span>
             </div>
-            <div class="nav-icon-container nav-desktop-account-container">
-                <a href="#">
+            <div class="nav-icon-container nav-log-in-container">
+                <a href="#" class="nav-log-in-link">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="nav-icon" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0" />
                         <path fill-rule="evenodd"
                             d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1" />
                     </svg>
-                    <div class="nav-desktop-account-text">
-                        <span>Hello, Max!</span>
-                        <span>View Account</span>
-                    </div>
+                    <span class="nav-log-in-text">Log in</span>
+                </a>
+                <a href="#" class="nav-sign-up-link">
+                    <span class="nav-sign-up-text">Sign up</span>
                 </a>
             </div>
         </nav>
@@ -280,61 +280,135 @@
         </div>
     </div>
 
-    <main>
-        <section class="section-container section-container-intitial">
-            <div class="game-detail-section">
-                <div class="game-detail-section-header">
-                    <h6 class="game-detail-section-header-content">Over 30 Division 1 North</h6>
+    <section class="section-container section-container-sticky">
+        <div class="game-detail-section">
+            <div class="game-detail-section-header">
+                <h1 class="game-detail-sticky-section-header-content">Over 30 Division 1 North - Fall 2025</h1>
+            </div>
+            <div class="game-detail-matchup-section">
+                <div class="game-detail-match-status-container">
+                    <span class="match-status-official match-status">Official Result</span>
                 </div>
-                <div class="game-detail-matchup-section">
-                    <!-- Should link to team this link contains info on -->
+            </div>
+            <div class="game-detail-matchup-section">
+                <!-- Should link to team this link contains info on -->
+                <div class="game-detail-matchup-team-container">
                     <a href="#" class="game-detail-matchup-team">
                         <div class="game-detail-matchup-team-info">
                             <h2 class="game-detail-matchup-team-name">Eastern FC</h2>
-                            <span>Home Team</span>
                         </div>
                         <div class="game-detail-matchup-team-logo">
                             <img src="images/villa.png" alt="team logo">
                         </div>
                     </a>
-                    <!-- This section is dynamic and changes based off of date and access level -->
-                    <div class="game-detail-score">
-                        <form action="" class="score-form">
-                            <div class="score-form-group">
-                                <label for="away-score"></label>
-                                <input class="score-input score-input-win" type="text" id="home-score" name="home-score" value="3" readonly>
-                                <span class="score-dash"></span>
-                                <input class="score-input" type="text" id="away-score" name="away-score" value="2" readonly>
-                            </div>
-                        </form>
-                    </div>
-                    <!-- Should link to team this link contains info on -->
+                    <span class="game-detail-score">4</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="game-detail-match-caret" viewBox="0 0 8 16">
+                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
+                    </svg>
+                </div>
+                <div class="game-detail-matchup-info">
+                    <span class="game-detail-matchup-end-label">FT</span>
+                </div>
+                <!-- Should link to team this link contains info on -->
+                 <div class="game-detail-matchup-team-container">
+                    <span class="game-detail-score game-detail-score-loss">3</span>
                     <a href="team.html" class="game-detail-matchup-team">
                         <div class="game-detail-matchup-team-logo">
                             <img src="images/iv_logo.png" alt="team logo">
                         </div>
                         <div class="game-detail-matchup-team-info">
                             <h2 class="game-detail-matchup-team-name">Irish Village</h2>
-                            <span>Away Team</span>
                         </div>
                     </a>
+                 </div>
+            </div>
+        </div>
+    </section>
+    <main class="main-with-sticky-offset">
+        <section class="section-container">
+            <div class="section-announcement-container">
+                <div class="section-announcement-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+                    </svg>
                 </div>
+                <h4 class="section-announcement-text">Game time changed to 8:00 AM</h4>
+            </div>
+            <div class="section-announcement-container">
+                <div class="section-announcement-icon-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
+                        <path
+                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
+                    </svg>
+                </div>
+                <h4 class="section-announcement-text">Field Location has been changed to Foss Park Somerville</h4>
             </div>
         </section>
-        <section class="section-container">
-            <div class="game-detail-section">
-                <div class="game-detail-location-header">
-                    <p class="game-detail-location-field">Game Location: <span>Foss Park Somerville MA <span
-                                class="game-detail-location-underline">(turf)</span> - 49
-                            Fellsway W,
-                            Somerville, MA</span></p>
-                    <p class="game-detail-location-code">USO Field Code: <span>5782</span></p>
+        <section class="section-split-container">
+            <div class="split-container-main">
+                <div class="game-detail-header">
+                    <h2 class="game-detail-section-header-content">Location</h2>
                 </div>
+                <p class="game-detail-location-field">Foss Park Somerville MA <span
+                    class="game-detail-location-underline">(turf)</span> - 49
+                    Fellsway W,
+                    Somerville, MA
+                </p>
                 <div class="game-detail-map">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.722355640539!2d-71.09142492388911!3d42.39106077118995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e37084d359498b%3A0x4137687df1e0b676!2s49%20Fellsway%20W%2C%20Somerville%2C%20MA%2002145!5e0!3m2!1sen!2sus!4v1745769150098!5m2!1sen!2sus"
-                        width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="split-container-remainder">
+                <div class="game-detail-header">
+                    <h2 class="game-detail-section-header-content">Team Stats</h2>
+                </div>
+                <div class="game-detail-team-stats-header">
+                    <div class="game-detail-team-stats-team">
+                        <img src="images/villa.png" alt="team logo" class="game-detail-team-stats-team-logo">
+                        <p class="game-detail-team-stats-team-name">Eastern FC</p>
+                    </div>
+                    <div class="game-detail-team-stats-team">
+                        <img src="images/iv_logo.png" alt="team logo" class="game-detail-team-stats-team-logo">
+                        <p class="game-detail-team-stats-team-name">Irish Village</p>
+                    </div>
+                </div>
+                <div class="game-detail-team-stats-row">
+                    <div class="game-detail-team-stat game-detail-team-stat-highlight">3</div>
+                    <div class="game-detail-team-stat-label">Wins</div>
+                    <div class="game-detail-team-stat">2</div>
+                </div>
+                <div class="game-detail-team-stats-row">
+                    <div class="game-detail-team-stat game-detail-team-stat-highlight">9</div>
+                    <div class="game-detail-team-stat-label">Points</div>
+                    <div class="game-detail-team-stat">6</div>
+                </div>
+                <div class="game-detail-team-stats-row">
+                    <div class="game-detail-team-stat game-detail-team-stat-highlight">3.00</div>
+                    <div class="game-detail-team-stat-label">PPG</div>
+                    <div class="game-detail-team-stat">2.00</div>
+                </div>
+                <div class="game-detail-team-stats-row">
+                    <div class="game-detail-team-stat">9</div>
+                    <div class="game-detail-team-stat-label">GF</div>
+                    <div class="game-detail-team-stat game-detail-team-stat-highlight">10</div>
+                </div>
+                <div class="game-detail-team-stats-row">
+                    <div class="game-detail-team-stat">3</div>
+                    <div class="game-detail-team-stat-label">GA</div>
+                    <div class="game-detail-team-stat">3</div>
+                </div>
+                <div class="game-detail-team-stats-row">
+                    <div class="game-detail-team-stat">+6</div>
+                    <div class="game-detail-team-stat-label">GD</div>
+                    <div class="game-detail-team-stat game-detail-team-stat-highlight">+7</div>
                 </div>
             </div>
         </section>
@@ -462,24 +536,6 @@
                         </table>
                     </div>
                 </div>
-            </div>
-        </section>
-        <section class="section-container">
-            <div class="game-detail-section">
-                <div class="game-detail-section-header">
-                    <h6 class="game-detail-section-header-content">Game News</h6>
-                </div>
-            </div>
-            <div class="section-announcement-container">
-                <div class="section-announcement-icon-container">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-exclamation-circle" viewBox="0 0 16 16">
-                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16" />
-                        <path
-                            d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0M7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0z" />
-                    </svg>
-                </div>
-                <h4 class="section-announcement-text">Game time changed from 9:00 AM to 8:00 AM</h4>
             </div>
         </section>
     </main>
